@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctame - ChanonaTKD</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Contenedor principal */
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seccionesphysics: 0px 0px transparent;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        /* Secciones principales */
+        .section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        /* Contenedor para textos centrados y organizados */
+        .text-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        /* Títulos con fuente creativa */
+        .section-title {
+            text-align: center;
+            color: #fff;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #c0c0c0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Texto general, profesional y elegante */
+        .section-text {
+            text-align: center;
+            color: #fff;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        /* Botones elegantes con márgenes */
+        .btn {
+            display: block;
+            margin: 15px auto;
+            padding: 12px 25px;
+            background-color: #8B0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid #8B0000;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+            cursor: pointer;
+            width: fit-content;
+        }
+        .btn:hover {
+            background-color: #fff;
+            color: #8B0000;
+            border-color: #fff;
+        }
+
+        /* Contenedor para redes sociales */
+        .social-links-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Lista de redes sociales */
+        .social-links {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+        .social-links li {
+            margin: 15px 0;
+            position: relative;
+            padding-left: 40px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-links li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        .social-links li a.btn {
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+
+        /* Íconos para cada red social */
+        .social-links li.whatsapp::before { content: "📱"; }
+        .social-links li.telegram::before { content: "📢"; }
+        .social-links li.youtube::before { content: "▶️"; }
+        .social-links li.tiktok::before { content: "🎵"; }
+        .social-links li.instagram::before { content: "📸"; }
+        .social-links li.facebook::before { content: "📘"; }
+        .social-links li.x::before { content: "🐦"; }
+        .social-links li.threads::before { content: "🧵"; }
+
+        /* Botón de WhatsApp fijo */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .whatsapp-btn img {
+            width: 30px;
+            height: 30px;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Animación fadeIn */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries responsivas para todos los dispositivos */
+        @media (max-width: 480px) {
+            .section {
+                padding: 15px;
+            }
+            .section-text {
+                font-size: 0.9em;
+            }
+            .section-title {
+                font-size: 1.2em;
+            }
+            .logo {
+                max-width: 120px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+                margin: 10px auto;
+            }
+            .whatsapp-btn {
+                bottom: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+            .whatsapp-btn img {
+                width: 25px;
+                height: 25px;
+            }
+            .social-links li {
+                font-size: 0.9em;
+                padding-left: 35px;
+            }
+            .social-links li::before {
+                font-size: 1em;
+            }
+            .social-links li a.btn {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            .social-links-container {
+                padding: 10px;
+                margin: 5px 0;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .section {
+                padding: 20px;
+            }
+            .section-text {
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 1.4em;
+            }
+            .logo {
+                max-width: 140px;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 1em;
+                margin: 12px auto;
+            }
+            .social-links li {
+                font-size: 1em;
+                padding-left: 40px;
+            }
+            .social-links li a.btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+            .social-links-container {
+                padding: 12px;
+                margin: 8px 0;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .section {
+                padding: 30px;
+            }
+            .section-text {
+                font-size: 1.1em;
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
+            .social-links li {
+                font-size: 1.2em;
+                padding-left: 40px;
+            }
+            .social-links li a.btn {
+                padding: 12px 25px;
+                font-size: 1.1em;
+            }
+            .social-links-container {
+                padding: 15px;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="ChanonaTKD Logo" class="logo">
+    </header>
+
+    <div class="content">
+        <section id="contact" class="section">
+            <h1 class="section-title">Contáctame - ChanonaTKD</h1>
+            <div class="text-container">
+                <p class="section-text">¡Hola, atleta! Si quieres entrenar conmigo, conocer más sobre Taekwondo, o seguir mi contenido, aquí tienes todas mis redes sociales y formas de contacto. ¡Conéctate conmigo y llevemos tu rendimiento al siguiente nivel!</p>
+            </div>
+
+            <div class="social-links-container">
+                <ul class="social-links">
+                    <li class="whatsapp"><a href="https://whatsapp.com/channel/0029Vb6BpKPHbFVCYfhOyX2t" class="btn" target="_blank">WhatsApp</a></li>
+                    <li class="telegram"><a href="https://t.me/chanonatkd_members" class="btn" target="_blank">Telegram</a></li>
+                    <li class="youtube"><a href="https://www.youtube.com/c/ChanonaTKD" class="btn" target="_blank">YouTube</a></li>
+                    <li class="tiktok"><a href="https://www.tiktok.com/@chanonatkd_taekwondo?_t=ZM-8v99lBbSiKj&_r=1" class="btn" target="_blank">TikTok</a></li>
+                    <li class="instagram"><a href="https://www.instagram.com/chanonatkd_taekwondo?igsh=MWVianltYmw4M2lkbQ%3D%3D&utm_source=qr" class="btn" target="_blank">Instagram</a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/share/1DA3Quisjw/?mibextid=wwXIfr" class="btn" target="_blank">Facebook</a></li>
+                    <li class="x"><a href="https://x.com/bryanchanona?s=21" class="btn" target="_blank">X</a></li>
+                    <li class="threads"><a href="https://www.threads.net/@chanonatkd_taekwondo?igshid=NTc4MTIwNjQ2YQ==" class="btn" target="_blank">Threads</a></li>
+                </ul>
+            </div>
+
+            <a href="https://chanonatkd.github.io/inicioChanonaTKD/" class="btn" target="_blank">Visita mi Página Web</a>
+        </section>
+    </div>
+
+    <a href="https://whatsapp.com/channel/0029Vb6BpKPHbFVCYfhOyX2t" class="whatsapp-btn" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <p>© 2025 ChanonaTKD - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
